@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text To Speech Convertor</title>
+</head>
+<body style="margin-top: 10px;margin-left:600px;">
+    <textarea style="width:400px; height: 200px;"></textarea><br>
+    <button>Speak</button>
+</body>
+<script>
+let button=document.querySelector("button"),
+text=document.querySelector("textarea");
+button.addEventListener("click",()=>{
+    let speechVariable= new SpeechSynthesisUtterance(text.value);
+    speechSynthesis.speak(speechVariable);
+});
+
+</script>
+</html>

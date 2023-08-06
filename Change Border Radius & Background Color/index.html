@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Border Radius & Background Color</title>
+    <style>
+    div{
+    height: 200px;
+    width: 200px;
+    border: 1px solid #333;
+    transition: all 0.4s ease;
+}
+ </style>
+</head>
+<body>
+    <div></div><br>
+    <input type="text"/>
+</body>
+<script>
+
+let box=document.querySelector("div"),
+input=document.querySelector("input");
+
+input.addEventListener("input", () => {
+    box.style.borderRadius=input.value;
+    box.style.background=input.value;
+});
+</script>
+</html>
