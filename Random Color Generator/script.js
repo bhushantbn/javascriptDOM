@@ -1,54 +1,15 @@
-console.log("Bhushan trivedi")
-let boxes=document.getElementsByClassName("box")
-console.log(boxes);
+console.log("script called..")
 
-boxes[2].style.backgroundColor="green"
-boxes[2].style.width="200px"
-boxes[2].style.height="200px"
-boxes[2].style.color="white"
-boxes[2].style.borderRadius="50%"
-boxes[2].style.textAlign="center"
-boxes[2].style.lineHeight="200px"
-boxes[2].innerHTML="Bhushan"
-boxes[2].style.fontSize="50px"
-boxes[2].style.fontWeight="bold"
-boxes[2].style.margin="auto"
-boxes[2].style.display="block"
-boxes[2].style.marginTop="100px"
-boxes[2].style.marginBottom="100px"
-boxes[2].style.marginLeft="100px"
-boxes[2].style.marginRight="100px"
-boxes[2].style.border="5px solid black"
-boxes[2].style.padding="50px"
-boxes[2].style.cursor="pointer"
-boxes[2].addEventListener("click",function(){
-    boxes[2].style.backgroundColor="red"
-})
-boxes[3].style.backgroundColor="yellow"
-boxes[3].style.width="200px"
-boxes[3].style.height="200px"
-boxes[3].style.color="black"
-boxes[3].style.borderRadius="20%"
-boxes[3].style.textAlign="center"
-boxes[3].style.lineHeight="200px"
-boxes[3].innerHTML="Trivedi"
-boxes[3].style.fontSize="20px"
-boxes[3].style.fontWeight="bold"
-boxes[3].style.margin="auto"
-boxes[3].style.display="block"
-boxes[3].style.marginTop="100px"
-boxes[3].style.marginBottom="100px"
-boxes[3].style.marginLeft="100px"
-boxes[3].style.marginRight="100px"
-boxes[3].style.border="5px solid black"
-boxes[3].style.padding="50px"
-boxes[3].style.cursor="pointer"
-boxes[3].addEventListener("click",function(){
-    boxes[3].style.backgroundColor="pink"
-    boxes[3].style.color="green"
-    boxes[3].style.fontSize="20px"
-    boxes[3].innerHTML="Bhushan Trivedi"
-    boxes[3].style.fontWeight="bold"
-    boxes[3].style.lineHeight="200px"
-    boxes[3].style.textAlign="center"
+let boxes=document.querySelector('.container').children
+
+
+function getRandomColor(params) {
+    let valOne=Math.ceil(0 + Math.random() * 255)
+    let valTwo=Math.ceil(0 + Math.random() * 255)
+    let valThree=Math.ceil(0 + Math.random() * 255)
+    return `rgb(${valOne}, ${valTwo}, ${valThree})`
+}
+Array.from(boxes).forEach(element => {
+    element.style.backgroundColor=getRandomColor();
+    element.style.color=getRandomColor();
 })
