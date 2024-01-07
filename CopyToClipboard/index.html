@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copy To Clipboard - By bhushan trivedi</title>
+</head>
+<body>
+    <input type="text" id="copy">
+    <button type="button" onclick="copyText()">
+    Copy Text
+    </button>
+</body>
+<script>
+    function copyText() {
+        let text=document.getElementById('copy')
+        text.select()
+        document.execCommand('copy')
+    }
+</script>
+</html>
