@@ -1,0 +1,30 @@
+body{
+
+    margin: 0;
+    padding:0;
+    display: grid;
+    width: 200px;
+    height: 200px;
+}
+button{
+    background-color: aqua;
+    font-size: 16px;
+    color: black;
+    margin-left: 10px;
+}
+textarea{
+   margin-top: 15px;
+   margin-left: 10px;
+   width: 250px;
+   height: 100px;
+   outline: 0cap;
+   border: solid gray;
+   position: relative;
+}
+p{
+    margin-top: 15px;
+    margin-left: 10px;
+}
+#showData,#showWords{
+    color: blue;
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Background Color</title>
+</head>
+<body style="background: gray; color: white;">
+    <div class="parent">
+        <select name="colors" id="colors">
+            <option value="Red">Red</option>
+            <option value="Green">Green</option>
+            <option value="Orange">Orange</option>
+            <option value="Blue">Blue</option>
+        </select>
+    </div>
+</body>
+<script>
+    function changeBackgroundColor() {
+        const colorSelect = document.getElementById('colors');
+        const selectedValue = colorSelect.value;
+        
+        switch (selectedValue) {
+            case 'Red':
+                document.body.style.background = 'red';
+                break;
+            case 'Green':
+                document.body.style.background = 'green';
+                break;
+            case 'Orange':
+                document.body.style.background = 'orange';
+                break;
+            case 'Blue':
+                document.body.style.background = 'blue';
+                break;
+            default:
+                document.body.style.background = 'gray';
+        }
+    }
+
+    const colorSelect = document.getElementById('colors');
+    colorSelect.addEventListener('change', changeBackgroundColor);
+
+    // Trigger the function initially to reflect default selected color
+    changeBackgroundColor();
+</script>
+</html>
