@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Show Hide DIV</title>
+  </head>
+  <link rel="stylesheet" href="style.css">
+  <body>
+    <form>
+        <label>What is your primary identity card?</label>
+        <hr>
+          <input type="radio" name="primarycard" id="Rescard" onclick="showHideDiv(this)" value="Residence card" /> Residence card
+          <input type="radio" name="primarycard" id="Dricard" onclick="showHideDiv(this)" value="Driving card" /> Driving card
+          <input type="radio" name="primarycard" id="Passport" onclick="showHideDiv(this)" value="Passport" /> Passport
+          <input type="radio" name="primarycard" id="Other" onclick="showHideDiv(this)" value="Other" /> Other
+      
+          <div id="DivToShowHide" style="display: none">
+              <div id="DivToShowHideOther" style="display: none">
+              <br />What <span class="primarycardnow">other</span> card will you use?
+              <input type="text" name="OtherCard"/>
+              </div>
+              <br />Type here your <span id="primarycardnow"></span> number:
+              <input type="text" name="IdentityNumber"/>
+          </div>
+      </form>
+
+    <script src="script.js"></script>
+  </body>
+</html>
